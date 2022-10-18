@@ -1,0 +1,109 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "<#CB4B16>\u250f[</>{{ .UserName }}<#CB4B16>]</>",
+          "type": "session"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "<#CB4B16>[</>{{ .HEAD }}<#CB4B16>]</>",
+          "type": "git"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "<#CB4B16>[</>\uf0e7<#CB4B16>]</>",
+          "type": "root"
+        },
+        {
+          "foreground": "#ffffff",
+          "style": "plain",
+          "template": "<#CB4B16>[x</>{{ .Meaning }}<#CB4B16>]</>",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#6CA35E",
+          "foreground": "#ffffff",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "\ue718 {{ .Full }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "node"
+        },
+        {
+          "background": "#4c1f5e",
+          "foreground": "#ffffff",
+          "leading_diamond": " \ue0b6",
+          "style": "diamond",
+          "template": "\ue738 {{ .Full }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "java"
+        },
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": " {{ if gt .Code 0 }}<#ff0000>\uf00d</> {{ else }}<#23d18b>\uf42e</> <#CB4B16>\u2513</>{{ end }}",
+          "type": "exit"
+        },
+        {
+          "foreground": "#ffffff",
+          "properties": {
+            "threshold": 10
+          },
+          "style": "plain",
+          "template": "<#CB4B16>[</>took \uf252 {{ .FormattedMs }}<#CB4B16>]\u2513</>",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#ffffff",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<#CB4B16>\u2516[</>{{ .Path }}<#CB4B16>]></>",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#ffffff",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "template": "<#CB4B16>[</>\uf017 {{ .CurrentDate | date .Format }}<#CB4B16>]\u251B</>",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
