@@ -1,3 +1,4 @@
 # cccv
 
-### Student in Computer Science at University of Mons 👍
+### Bachelor in Computer Science at University of Mons 👍
+### Currently Master in Cybersecurity at ULB 👍
